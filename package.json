@@ -1,0 +1,47 @@
+{
+	"name": "canvas-sketch-sandbox",
+	"version": "1.0.0",
+	"description": "Canvas Sketch Sandbox",
+	"author": "Tristan Lanoye",
+	"private": true,
+	"scripts": {
+		"open": "canvas-sketch --hot --open",
+		"release": "standard-version && git push --follow-tags origin",
+		"commit": "git add . && commit",
+		"push": "git push origin",
+		"lint": "eslint --ext .js --ignore-path .gitignore"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn lint",
+			"commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
+		}
+	},
+	"dependencies": {
+		"canvas-sketch": "^0.7.3",
+		"canvas-sketch-util": "^1.10.0",
+		"cross-env": "^5.2.0",
+		"dotenv": "^8.2.0",
+		"eases": "^1.0.8",
+		"glsl-hsl2rgb": "^1.1.0",
+		"glsl-map": "^1.0.1",
+		"glsl-noise": "0.0.0",
+		"load-asset": "^1.2.0",
+		"lodash": "^4.17.15",
+		"nice-color-palettes": "^3.0.0",
+		"three": "^0.116.1"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"@commitlint/prompt-cli": "^8.3.5",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.8.0",
+		"eslint-loader": "^4.0.2",
+		"eslint-plugin-nuxt": "^0.5.2",
+		"eslint-plugin-vue": "^6.2.2",
+		"husky": "^4.2.5",
+		"prettier": "^2.0.5",
+		"standard-version": "^7.1.0"
+	}
+}
