@@ -27,7 +27,7 @@
 		"glsl-map": "^1.0.1",
 		"glsl-noise": "0.0.0",
 		"load-asset": "^1.2.0",
-		"lodash": "^4.17.15",
+		"lodash": "^4.17.21",
 		"nice-color-palettes": "^3.0.0",
 		"three": "^0.116.1"
 	},
